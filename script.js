@@ -41,13 +41,13 @@ window.addEventListener("load", function() {
       if (fuelLevel.value >= 10000){
         fuelStatus.innerHTML =`fuel level high enough for launch`;
       }
-      if(cargoMass.value >= 10000) {
+      if(cargoMass.value > 10000) {
       faultyItems.style.visibility = "visible";
       cargoStatus.innerHTML = `There is too much mass for the shuttle to take off`;
       launchStatus.innerHTML = `Shuttle not Ready for Launch`;
       launchStatus.style.color = "red";
       }
-      if(cargoMass.value < 10000) {
+      if(cargoMass.value <= 10000) {
          cargoStatus.innerHTML = `Cargo mass low enough for launch`;
       }
       if (fuelLevel.value>=10000 && cargoMass.value <10000) {
